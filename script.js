@@ -6,6 +6,8 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
 var spcchar = "!@#$%^&*-_?";
+var passwordLenght = (14);
+  console.log("Maximum number of characters");
 
 // Write password to the #password input
 function writePassword() {
@@ -19,6 +21,13 @@ function writePassword() {
     console.log(spcchar);
   var password = "";
     console.log("Empty string");
+
+//Need a loop to randomize and create password
+//Need to make sure it knows when to stop adding characters to the password
+for (var i = 0; i < 10; i++){
+  let writePassword = upperCase[Math.floor(Math.random() * 10)];
+  password += generateBtn;
+}
 
   var passwordText = document.querySelector("#password");
 
