@@ -44,3 +44,5 @@ for (var i = 0; i < passwordLength; i++){
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Clean up code to comply with DRY principle.  Check to see if you really need lines 5 through 12 since the variables are defined inside the function
