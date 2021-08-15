@@ -5,35 +5,39 @@ var generateBtn = document.querySelector("#generate");
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   console.log(upperCase.length);
 
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
   console.log(lowerCase.length);
 
-  var numbers = "0123456789";
+var numbers = "0123456789";
   console.log(numbers.length);
 
-  var spcchar = "!@#$%^&*-_?";
+var spcchar = "!@#$%^&*-_?";
   console.log(spcchar.length);
 
-  var passwordLength = (9);
+var passwordLength = (9);
   console.log("Maximum number of characters in password is 9");
 
-  var characters = upperCase + lowerCase + numbers + spcchar;
+var characters = upperCase, lowerCase, numbers, spcchar;
   console.log("Length of characters available for password", upperCase.length + lowerCase.length + numbers.length + spcchar.length);
 
 
 // Write password to the #password input
 function writePassword() {
-  var characters = upperCase + lowerCase + numbers + spcchar;
-    console.log("Characters from all strings to be used in password");
+  let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*-_?"
   var password = "";
     console.log("Empty string");
 
-//Need a loop to randomize and create password
-//Need to make sure it knows when to stop adding characters to the password
 
-for (var i = 1; i <= passwordLength; i++){
-  var generateBtn = characters[Math.floor(Math.random() * passwordLength)];
+//Need to make sure it knows when to stop adding characters to the password
+//How do we limit the number of characters the password has?
+
+for (var i = 0; i <= passwordLength; i++){
+  var generateBtn = characters[Math.floor(Math.random() * 73)];
   password += generateBtn;
+
+
+
+  
 }
 
   var passwordText = document.querySelector("#password");
