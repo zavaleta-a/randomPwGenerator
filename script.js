@@ -21,15 +21,15 @@ var characters = upperCase, lowerCase, numbers, spcchar;
   console.log("Length of characters available for password", upperCase.length + lowerCase.length + numbers.length + spcchar.length);
 
 
-// Write password to the #password input
+// Function that generates the password
 function writePassword() {
   let characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*-_?"
   var password = "";
     console.log("Empty string");
 
 
-//Need to make sure it knows when to stop adding characters to the password
-//How do we limit the number of characters the password has?
+
+//By adding 73 to the end of the loop, it allowed us to generate a password using upperCase, lowerCase, numbers, and spcchar.
 
 for (var i = 0; i <= passwordLength; i++){
   var generateBtn = characters[Math.floor(Math.random() * 73)];
@@ -48,8 +48,3 @@ for (var i = 0; i <= passwordLength; i++){
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//Clean up code to comply with DRY principle.  Check to see if you really need lines 5 through 12 since the variables are defined inside the function
-
-
-// Add prompts asking user to select password criteria
